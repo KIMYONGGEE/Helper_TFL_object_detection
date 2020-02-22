@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.tensorflow.lite.examples.detection.tracking.SearchActivity">
+
+    <!--아이디, 비밀번호-->
+    <TextView
+        android:id="@+id/text_id"
+        android:layout_width="74dp"
+        android:layout_height="32dp"
+        android:text="이름"
+        android:textSize="20dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="40dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="222dp" />
+    <TextView
+        android:id="@+id/text_pw"
+        android:layout_width="83dp"
+        android:layout_height="33dp"
+        android:text="전화번호"
+        android:textSize="20dp"
+        android:layout_below="@id/text_id"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="220dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="10"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <EditText
+        android:id="@+id/edit_pw"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_id"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <!--ID찾기-->
+    <ImageButton
+        android:id="@+id/imgbtn_idfind"
+        android:layout_width="172dp"
+        android:layout_height="39dp"
+        android:padding="0dp"
+        android:src="@drawable/imgbtn_pwfind"
+        android:layout_centerHorizontal="true"
+        android:layout_alignEnd="@+id/imgbtn_login"
+        android:layout_marginTop="380dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="385dp"
+        android:layout_alignRight="@+id/imgbtn_login" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_voice"
+        android:layout_width="253dp"
+        android:layout_height="259dp"
+        android:padding="0dp"
+        android:src="@drawable/imgbtn_voice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="455dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="456dp" />
+</RelativeLayout>

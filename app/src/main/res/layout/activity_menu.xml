@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/imgview_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/imgview_nvbar"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_pathstd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:padding="0dp"
+        android:src="@drawable/imgbtn_pathstd_n"
+        android:background="#00ff0000"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_pathsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="223dp"
+        android:padding="0dp"
+        android:background="#00ff0000"
+        android:src="@drawable/imgbtn_pathsel_n"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_pathsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="325dp"
+        android:background="#00ff0000"
+        android:padding="0dp"
+        android:src="@drawable/imgbtn_pathsave_n"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="530dp"
+        android:padding="0dp"
+        android:background="#00ff0000"
+        android:src="@drawable/imgbtn_voice"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <EditText
+        android:id="@+id/Menu_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/text_id"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="680dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="gone"
+        android:maxLength="10" />
+</RelativeLayout>

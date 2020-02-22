@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.tensorflow.lite.examples.detection">
+
+    <uses-sdk />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/mainlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/mainlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="(write your google map API_serial key)" />
+
+        <activity
+            android:name=".tracking.LogoActivity"
+            android:label="@string/activity_name_detection"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tracking.MapsActivity"/>
+        <activity android:name=".tracking.MenuActivity"/>
+        <activity android:name=".tracking.MainActivity"/>
+        <activity android:name=".CameraActivity"/>
+        <activity android:name=".DetectorActivity"/>
+        <activity android:name=".tracking.SearchActivity"/>
+
+    </application>
+</manifest>
