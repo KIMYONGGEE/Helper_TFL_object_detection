@@ -46,11 +46,12 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="530dp"
         android:padding="0dp"
-        android:background="#00ff0000"
         android:src="@drawable/imgbtn_changetoobject"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="456dp" />
+        tools:layout_editor_absoluteY="456dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"/>
 
     <include
         android:id="@+id/bottom_sheet_layout"
