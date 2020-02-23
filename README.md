@@ -10,10 +10,10 @@ Using the coco_train_model provided by the object detachment library of the tens
 It deals with two great functions.
 
 1. Detection and guidance of objects that can help the walking environment
-    1-1 car,person, bicycle, traffic light...etc 
+<Car,person, bicycle, traffic light...etc >
 
 2. Detection and guidance of objects that can help your daily life.
-    2-1 kitchenware, office supplies, furniture, food...etc
+<kitchenware, office supplies, furniture, food...etc>
 
 
 ## Build the demo using Android Studio
