@@ -40,7 +40,7 @@
     </RelativeLayout>
 
     <ImageButton
-        android:id="@+id/imgbtn_changetoobject"
+        android:id="@+id/imgbtn_changetoroad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"

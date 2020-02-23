@@ -26,7 +26,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="(write your google map API_serial key)" />
+            android:value="right your google map api_key" />
 
         <activity
             android:name=".tracking.LogoActivity"
@@ -42,7 +42,9 @@
         <activity android:name=".tracking.MainActivity"/>
         <activity android:name=".CameraActivity"/>
         <activity android:name=".DetectorActivity"/>
+        <activity android:name=".testDetectorClone"/>
         <activity android:name=".tracking.SearchActivity"/>
+        <activity android:name=".testCameraActivity"/>
 
     </application>
 </manifest>

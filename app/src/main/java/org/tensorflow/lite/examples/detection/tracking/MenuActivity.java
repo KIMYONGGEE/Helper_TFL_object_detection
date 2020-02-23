@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import org.tensorflow.lite.examples.detection.DetectorActivity;
+import org.tensorflow.lite.examples.detection.testDetectorClone;
 import org.tensorflow.lite.examples.detection.R;
 
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     final int PERMISSION = 1;
 
     //보이스  출력
+
     private TextToSpeech tts;
 
 
@@ -87,7 +89,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 Intent intent1=new Intent(MenuActivity.this, DetectorActivity.class);
                 startActivity(intent1);
-                tts.speak("안내시작 페이지입니다.", TextToSpeech.QUEUE_FLUSH, null);
+                tts.speak("안내를 시작합니다. 다른 메뉴를 선택하고 싶으시면 디바이스 하단을 터치해주세요.", TextToSpeech.QUEUE_FLUSH, null);
             }
         });
 
@@ -95,9 +97,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         imgbtn_Pathsel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2=new Intent(MenuActivity.this, MapsActivity.class);
+                Intent intent2=new Intent(MenuActivity.this, testDetectorClone.class);
                 startActivity(intent2);
-                tts.speak("경로를 선택합니다.", TextToSpeech.QUEUE_FLUSH, null);
+                tts.speak("사물 인식을 시작합니다. 다른 메뉴를 선택하고 싶으시면 디바이스 하단을 터치해주세요.", TextToSpeech.QUEUE_FLUSH, null);
 
             }
         });
@@ -198,17 +200,17 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                     Menu_Select.setText(matches.get(i));
                 }
 
-            if(Menu_Select.getText().toString().equals("경로선택") || Menu_Select.getText().toString().equals("경로 선택")|| Menu_Select.getText().toString().equals("경노 선택"))
+            if(Menu_Select.getText().toString().equals("사물인식") || Menu_Select.getText().toString().equals("사물 인식")|| Menu_Select.getText().toString().equals("사무 린식") || Menu_Select.getText().toString().equals("사무 인식"))
             {
-                Intent intent1=new Intent(MenuActivity.this, MapsActivity.class);
+                Intent intent1=new Intent(MenuActivity.this, testDetectorClone.class);
                 startActivity(intent1);
-                tts.speak("경로 선택 페이지입니다.", TextToSpeech.QUEUE_FLUSH, null);
+                tts.speak("사물 인식을 시작합니다. 다른 메뉴를 선택하고 싶으시면 디바이스 하단을 터치해주세요.", TextToSpeech.QUEUE_FLUSH, null);
             }
             else if (Menu_Select.getText().toString().equals( "안내시작") || Menu_Select.getText().toString().equals("안내 시작"))
             {
                 Intent intent2=new Intent(MenuActivity.this, DetectorActivity.class);
                 startActivity(intent2);
-                tts.speak("안내시작 페이지입니다.", TextToSpeech.QUEUE_FLUSH, null);
+                tts.speak("안내를 시작합니다. 다른 메뉴를 선택하고 싶으시면 디바이스 하단을 터치해주세요.", TextToSpeech.QUEUE_FLUSH, null);
             }
             else if (Menu_Select.getText().toString().equals("경로저장") || Menu_Select.getText().toString().equals("경로 저장")|| Menu_Select.getText().toString().equals("경노 저장"))
             {

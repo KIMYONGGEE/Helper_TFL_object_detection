@@ -38,6 +38,7 @@
         import android.os.Handler;
         import android.os.HandlerThread;
         import android.os.Trace;
+        import android.speech.tts.TextToSpeech;
         import android.util.Log;
         import android.util.Size;
         import android.view.Surface;
@@ -47,6 +48,7 @@
         import android.widget.Button;
         import android.widget.CompoundButton;
         import android.widget.EditText;
+        import android.widget.ImageButton;
         import android.widget.ImageView;
         import android.widget.LinearLayout;
         import android.widget.TextView;
@@ -65,11 +67,14 @@
         import org.tensorflow.lite.examples.detection.model.*;
         import org.tensorflow.lite.examples.detection.database.*;
         import org.tensorflow.lite.examples.detection.tracking.MainActivity;
+        import org.tensorflow.lite.examples.detection.tracking.MenuActivity;
 
         import java.io.IOException;
         import java.nio.ByteBuffer;
         import java.util.List;
         import java.util.Locale;
+
+        import static android.speech.tts.TextToSpeech.ERROR;
 
         public abstract class CameraActivity extends AppCompatActivity
                 implements OnImageAvailableListener,
@@ -114,6 +119,12 @@
           String[] REQUIRED_PERMISSIONS  = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
 
           private DbOpenHelper mDbOpenHelper;
+          private TextToSpeech tts;
+          ImageButton imgbtn_changetoobject;
+
+
+
+
 
           @Override
           public void onCreate(final Bundle savedInstanceState) {
@@ -133,6 +144,10 @@
             } else {
               requestPermission();
             }
+
+
+            imgbtn_changetoobject = (ImageButton) findViewById(R.id.imgbtn_changetoobject);
+            imgbtn_changetoobject.setOnClickListener(this);
 
             threadsTextView = findViewById(R.id.threads);
             plusImageView = findViewById(R.id.plus);
@@ -201,13 +216,34 @@
 
             mDbOpenHelper = new DbOpenHelper(getApplicationContext());
 
+
             //gps 시작부분
+            tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+              @Override
+              public void onInit(int status) {
+                if(status != ERROR) {
+                  // 언어를 선택한다.
+                  tts.setLanguage(Locale.KOREAN);
+                }
+              }
+            });
+
+            imgbtn_changetoobject.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View view) {
+                tts.speak("메인 메뉴 페이지입니다.디바이스 하단을 터치한 후 원하는 메뉴, 안내시작, 사물인식 중 하나를 말하세요.", TextToSpeech.QUEUE_FLUSH, null);
+                Intent intent1=new Intent(CameraActivity.this, MenuActivity.class);
+                startActivity(intent1);
+
+              }
+            });
 
             Button ShowLocationButton = (Button) findViewById(R.id.gps_button);
             ShowLocationButton.setOnClickListener(new View.OnClickListener()
             {
               @Override
               public void onClick(View v) {
+
 
                 gpsTracker = new GpsTracker(CameraActivity.this);
 

@@ -71,7 +71,7 @@ public class LogoActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent1 = new Intent(LogoActivity.this,MenuActivity.class);
                 startActivity(intent1);
 
-                tts.speak(" 디바이스 하단을 터치한 후 원하는 메뉴, 경로선택, 경로저장, 안내시작 중 하나를 말하세요.", TextToSpeech.QUEUE_FLUSH, null);
+                tts.speak(" 디바이스 하단을 터치한 후 원하는 메뉴, 안내시작, 사물인식 중 하나를 말하세요.", TextToSpeech.QUEUE_FLUSH, null);
             }
         }, 3000);
 
