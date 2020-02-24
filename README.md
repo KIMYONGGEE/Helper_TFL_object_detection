@@ -1,14 +1,24 @@
-# TensorFlow Lite Object Detection Android Demo
+# Helper(Tensorflow light object detection Project)
 ### Overview
-This is a camera app that continuously detects the objects (bounding boxes and classes) in the frames seen by your device's back camera, using a quantized [MobileNet SSD](https://github.com/tensorflow/models/tree/master/research/object_detection) model trained on the [COCO dataset](http://cocodataset.org/). These instructions walk you through building and running the demo on an Android device.
-
-The model files are downloaded via Gradle scripts when you build and run. You don't need to do any steps to download TFLite models into the project explicitly.
-
-Application can run either on device or emulator.
+Helper is an Android application for the blind.
+Using the coco_train_model provided by the object detachment library of the tensorflow light, you can conduct image processing object recognition and pass information to users through tts/stt library.
 
 <!-- TODO(b/124116863): Add app screenshot. -->
 
+### prototype v 1.0
+
+It deals with two great functions.
+
+1. Detection and guidance of objects that can help the walking environment
+<Car,person, bicycle, traffic light...etc >
+
+2. Detection and guidance of objects that can help your daily life.
+<kitchenware, office supplies, furniture, food...etc>
+
+
 ## Build the demo using Android Studio
+
+
 
 ### Prerequisites
 
